@@ -1,0 +1,31 @@
+menu "AWS configuration"
+
+config phase1.aws.access_key
+	string "AWS access key"
+	help
+		The AWS access key.
+
+config phase1.aws.access_secret
+	string "AWS access secret"
+	help
+		The AWS access secret.
+
+config phase1.aws.region
+	string "AWS Region"
+	default "us-west-2"
+	help
+		The AWS region to use. List available here: http://docs.aws.amazon.com/general/latest/gr/rande.html
+
+config phase1.aws.ami
+	string "AMI"
+	default "ami-469d6c26"
+	help
+		The AMI used for the instances. See: http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/finding-an-ami.html
+
+	config phase1.aws.instance_type
+		string "AWS instance type"
+		default "t2.micro"
+		help
+			The type of the AWS instance. See: https://aws.amazon.com/fr/ec2/instance-types/
+
+endmenu
